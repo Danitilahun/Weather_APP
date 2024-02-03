@@ -181,8 +181,7 @@ const countries = {
 const axios = require("axios");
 const mapResponseToSchema = require("./mapper");
 const WeatherData = require("./weatherDataSchema");
-
-const apiKey = "a88bc0d22118d14b4a87c811d502d9ca";
+const apiKey = process.env.OPENWEATHER_API_KEY;
 
 async function fetchAndStoreWeatherData(latitude, longitude) {
   try {
